@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yumi Edições - Portfólio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(180deg, #000, #1a001a);
+      color: #fff;
+      overflow-x: hidden;
+      animation: fadeInBody 2s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background: linear-gradient(90deg, #000, #4b0082);
+      padding: 40px;
+      text-align: center;
+      animation: slideDown 1.5s ease-out;
+      box-shadow: 0 0 20px #4b0082;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+
+    h1 {
+      color: #d4af37;
+      font-size: 3em;
+      text-shadow: 0 0 10px #d4af37;
+    }
+
+    section {
+      margin: 60px 20px;
+      text-align: center;
+      animation: fadeInSection 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    section:nth-child(even) {
+      animation-delay: 0.5s;
+    }
+
+    section:nth-child(odd) {
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInSection {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(50px); }
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+    }
+
+    h2 {
+      color: #a66cff;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #a66cff;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #777;
+      font-size: 0.9em;
+      box-shadow: 0 -2px 10px #4b0082;
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .botao {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      border: 2px solid #d4af37;
+      color: #d4af37;
+      font-weight: bold;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      font-size: 1em;
+      background: transparent;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px #d4af37;
+      animation: pulse 1.5s infinite;
+    }
+
+    .botao::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0%;
+      top: 0;
+      left: 0;
+      background: #d4af37;
+      z-index: -1;
+      transition: all 0.3s ease;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .botao:hover {
+      color: #000;
+    }
+
+    .botao:hover::before {
+      height: 100%;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px #d4af37; }
+      50% { box-shadow: 0 0 40px #d4af37; }
+      100% { box-shadow: 0 0 20px #d4af37; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Yumi Edições</h1>
+    <p>Transformando memórias com arte e precisão</p>
+  </header>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <img src="https://picsum.photos/id/1005/600/400" alt="Sobre Mim">
+  </section>
+
+  <section>
+    <h2>Antes e Depois - Jovens</h2>
+    <img src="https://picsum.photos/id/1011/600/400" alt="Antes e Depois Jovens">
+  </section>
+
+  <section>
+    <h2>Antes e Depois - Restauração</h2>
+    <img src="https://picsum.photos/id/1027/600/400" alt="Antes e Depois Restauração">
+  </section>
+
+  <section>
+    <h2>Convite de Aniversário</h2>
+    <img src="https://picsum.photos/id/1035/600/400" alt="Convite de Aniversário da Laura">
+  </section>
+
+  <section>
+    <h2>Convite de Casamento - Letícia e Bruno</h2>
+    <img src="https://picsum.photos/id/1043/600/400" alt="Convite de Casamento - Letícia e Bruno">
+  </section>
+
+  <section>
+    <h2>Montagens Criativas</h2>
+    <img src="https://picsum.photos/id/1052/600/400" alt="Montagem Criativa">
+  </section>
+
+  <section>
+    <h2>Artes para Redes Sociais</h2>
+    <img src="https://picsum.photos/id/1069/600/400" alt="Artes para Redes Sociais">
+  </section>
+
+  <section>
+    <h2>Entre em Contato</h2>
+    <p>Quer transformar sua foto ou criar algo incrível?  
+      Fale comigo pelo Instagram:  
+      <a href="https://www.instagram.com/yumiedicoes" target="_blank">@yumiedicoes</a>  
+    </p>
+
+    <a href="https://www.instagram.com/yumiedicoes" target="_blank" class="botao">Fale comigo</a>
+  </section>
+
+  <footer>
+    © 2025 Yumi Edições - Todos os direitos reservados
+  </footer>
+</body>
+</html>
