@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(180deg, #0d0d0d, #1a001a);
-      color: #fff;
+      background: linear-gradient(180deg, #e0ccff, #ffffff);
+      color: #000;
       overflow-x: hidden;
       animation: fadeInBody 2s ease-in;
     }
@@ -20,22 +20,24 @@
     }
 
     header {
-      background: linear-gradient(90deg, #1a001a, #000);
+      background: linear-gradient(90deg, #b19cd9, #000);
       padding: 40px;
       text-align: center;
-      animation: slideDown 1.5s ease-out;
       box-shadow: 0 0 20px #4b0082;
     }
 
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
+    h1 {
+      color: #4b0082;
+      font-size: 3em;
+      text-shadow: 0 0 10px #4b0082;
     }
 
-    h1 {
-      color: #d4af37;
-      font-size: 3em;
-      text-shadow: 0 0 10px #d4af37;
+    h2 {
+      color: #4b0082;
+      border-bottom: 2px solid #4b0082;
+      padding-bottom: 5px;
+      margin-top: 40px;
+      text-shadow: 0 0 10px #4b0082;
     }
 
     section {
@@ -45,17 +47,16 @@
       opacity: 0;
     }
 
-    section:nth-child(even) {
-      animation-delay: 0.5s;
-    }
-
-    section:nth-child(odd) {
-      animation-delay: 1s;
-    }
-
     @keyframes fadeInSection {
       to { opacity: 1; transform: translateY(0); }
       from { opacity: 0; transform: translateY(50px); }
+    }
+
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.6;
+      font-size: 1.1em;
     }
 
     img {
@@ -65,129 +66,99 @@
       display: block;
       border-radius: 10px;
       transition: transform 0.5s ease, box-shadow 0.5s ease;
-      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+      box-shadow: 0 0 10px rgba(75, 0, 130, 0.5);
     }
 
     img:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
-    }
-
-    h2 {
-      color: #a66cff;
-      border-bottom: 2px solid #d4af37;
-      padding-bottom: 5px;
-      margin-top: 40px;
-      text-shadow: 0 0 10px #a66cff;
-    }
-
-    p {
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 1.1em;
-      color: #eee;
-    }
-
-    footer {
-      background: #111;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      color: #777;
-      font-size: 0.9em;
-      box-shadow: 0 -2px 10px #4b0082;
-    }
-
-    a {
-      color: #d4af37;
-      text-decoration: none;
+      box-shadow: 0 0 30px rgba(75, 0, 130, 0.8);
     }
 
     .botao {
       display: inline-block;
-      margin-top: 30px;
+      margin: 10px;
       padding: 15px 30px;
-      border: 2px solid #d4af37;
-      color: #d4af37;
+      border: 2px solid #4b0082;
+      color: #4b0082;
       font-weight: bold;
       border-radius: 30px;
-      position: relative;
-      overflow: hidden;
       text-transform: uppercase;
       font-size: 1em;
       background: transparent;
       transition: all 0.3s ease;
-      box-shadow: 0 0 20px #d4af37;
-      animation: pulse 1.5s infinite;
-    }
-
-    .botao::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 0%;
-      top: 0;
-      left: 0;
-      background: #d4af37;
-      z-index: -1;
-      transition: all 0.3s ease;
-      border-radius: 0 0 30px 30px;
+      cursor: pointer;
     }
 
     .botao:hover {
-      color: #000;
+      background: #4b0082;
+      color: #fff;
     }
 
-    .botao:hover::before {
-      height: 100%;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 20px #d4af37; }
-      50% { box-shadow: 0 0 40px #d4af37; }
-      100% { box-shadow: 0 0 20px #d4af37; }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
+  <audio id="music" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.botao').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
+          audio.play();
+        });
+      });
+    });
+  </script>
+
   <header>
     <h1>Yumi Edições</h1>
-    <p>Transformando memórias com arte e precisão</p>
+    <p><em>“Onde suas memórias ganham vida e estilo.”</em></p>
   </header>
 
   <section>
     <h2>Sobre Mim</h2>
-    <p>Olá! Sou a mente criativa por trás da Yumi Edições. Apaixonada por design gráfico e restauração de fotos, transformo memórias antigas em verdadeiras obras de arte e crio convites personalizados que encantam. Meu objetivo é oferecer qualidade, criatividade e um toque único em cada projeto.</p>
+    <p>Olá! Sou a criadora da Yumi Edições, apaixonada por transformar memórias em arte através de restaurações fotográficas, convites modernos e designs gráficos únicos.</p>
   </section>
 
   <section>
-    <h2>Antes e Depois - Restauração</h2>
-    <img src="https://cdn.openai.com/chatgpt/image-gen/9c34a7a2-d20f-49b8-923b-1b50ad528a56.png" alt="Antes e Depois">
-  </section>
+    <h2>Galeria</h2>
+    <h3>Restauração de Fotos</h3>
+    <img src="https://picsum.photos/id/237/600/400" alt="Restauração">
 
-  <section>
-    <h2>Convite Moderno</h2>
-    <img src="https://cdn.openai.com/chatgpt/image-gen/18cb0fe1-ea3a-470a-bf3c-a787c77f23b0.png" alt="Convite Moderno">
-  </section>
+    <h3>Convite Moderno</h3>
+    <img src="https://picsum.photos/id/1025/600/400" alt="Convite">
 
-  <section>
-    <h2>Design Gráfico</h2>
-    <img src="https://cdn.openai.com/chatgpt/image-gen/4b406e84-6955-4bd6-851c-441429da8c7f.png" alt="Design Gráfico">
+    <h3>Design Gráfico</h3>
+    <img src="https://picsum.photos/id/1040/600/400" alt="Design Gráfico">
   </section>
 
   <section>
     <h2>Entre em Contato</h2>
-    <p>Quer transformar sua foto ou criar um convite incrível?  
-      Fale comigo pelo Instagram ou Facebook:</p>
+    <p>Sinta-se à vontade para me enviar uma mensagem:</p>
+    <form>
+      <input type="text" placeholder="Seu nome" required><br><br>
+      <input type="email" placeholder="Seu email" required><br><br>
+      <textarea placeholder="Sua mensagem" rows="5" required></textarea><br><br>
+      <button type="submit" class="botao">Enviar</button>
+    </form>
 
+    <br>
     <a href="https://www.instagram.com/yumiedicoes" target="_blank" class="botao">Instagram</a>
     <a href="https://www.facebook.com/share/19RfMW81Lg/" target="_blank" class="botao">Facebook</a>
   </section>
 
   <footer>
-    © 2025 Yumi Edições - Todos os direitos reservados
+    &copy; 2025 Yumi Edições - Todos os direitos reservados
   </footer>
 </body>
 </html>
